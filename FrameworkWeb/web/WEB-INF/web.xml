@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>Hello</servlet-name>
+        <servlet-class>Hello</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HelloWorld</servlet-name>
+        <servlet-class>mg.itu.HelloWorld</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Hello</servlet-name>
+        <url-pattern>/Hello</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>HelloWorld</servlet-name>
+        <url-pattern>/HelloWorld</url-pattern>
+    </servlet-mapping>
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+  <servlet>
+    <servlet-name>frontservlet</servlet-name>
+    <servlet-class>etu1799.framework.servlet.FrontServlet</servlet-class>
+    <init-param>
+        <param-name>isConnected</param-name>
+        <param-value>false</param-value>
+    </init-param>
+    <init-param>
+        <param-name>profile</param-name>
+        <param-value>role</param-value>
+    </init-param>
+</servlet>
+<servlet-mapping>
+    <servlet-name>frontservlet</servlet-name>
+    <url-pattern>*.emp</url-pattern>
+</servlet-mapping>
+
+
+</web-app>
